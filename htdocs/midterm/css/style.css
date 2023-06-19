@@ -153,6 +153,7 @@ form#form-contact, #deliver{
     display: inline-block;
     position: relative;
     width: 100%;
+    height: 55px;
     margin: 2px;
     border: 2px solid var(--bg-color);
 }
@@ -175,7 +176,7 @@ form#form-contact, #deliver{
 .entry label{
     display: block;
     text-align: left;
-    margin-left: 2px;
+    margin-left: 5px;
     font-size: 15px;
     color: var(--bg-color);
 }
@@ -185,13 +186,12 @@ input, textarea, select{
     color: var(--input-color);
     background-color: transparent;
     display: block;
-    margin: 2px;
+    margin: 5px;
 }
-.state-select{
-    padding: 3px;
+.state-select, input, textarea{
+    padding: 0 0 5px 5px;
 }
 .state-select select{
-    box-sizing: border-box;
     appearance: none;
     width: 100%;
     color: var(--input-color);

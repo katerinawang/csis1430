@@ -44,22 +44,6 @@ section::before{
     opacity: .95;
     background-size: cover;
 }
-section#bg-home::before{
-    background-image: url(../img/bg/home.jpeg);
-    background-position: right 85%;
-}
-section#bg-contact::before{
-    background-image: url(../img/bg/contact.jpeg);
-    background-position: right 75%;
-}
-section#bg-about::before{
-    background-image: url(../img/bg/about.jpeg);
-    background-position: right 55%;
-}
-section#bg-order::before{
-    background-image: url(../img/bg/order.jpeg);
-    background-position: right 30%;
-}
 nav{
     position: absolute;
     bottom: 0;
@@ -397,4 +381,21 @@ input:checked + label h3{
 #order-icon{
     position: relative;
     animation: order 0.5s 0.5s ease-in;
+}
+/* large image loaded last to increase speed */
+section#bg-home::before{
+    background-image: url(../img/bg/home.jpeg);
+    background-position: right 85%;
+}
+section#bg-contact::before{
+    background-image: url(../img/bg/contact.jpeg);
+    background-position: right 75%;
+}
+section#bg-about::before{
+    background-image: url(../img/bg/about.jpeg);
+    background-position: right 55%;
+}
+section#bg-order::before{
+    background-image: url(../img/bg/order.jpeg);
+    background-position: right 30%;
 }

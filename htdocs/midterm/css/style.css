@@ -28,12 +28,12 @@ body{
 p{
     text-align: left;
 }
-section{
+header{
     position: relative;
     height: 200px;
     background-color: var(--header-color);
 }
-section::before{
+header::before{
     content: '';
     display: block;
     position: absolute;
@@ -383,19 +383,19 @@ input:checked + label h3{
     animation: order 0.5s 0.5s ease-in;
 }
 /* large image loaded last to increase speed */
-section#bg-home::before{
+header#bg-home::before{
     background-image: url(../img/bg/home.jpeg);
     background-position: right 85%;
 }
-section#bg-contact::before{
+header#bg-contact::before{
     background-image: url(../img/bg/contact.jpeg);
     background-position: right 75%;
 }
-section#bg-about::before{
+header#bg-about::before{
     background-image: url(../img/bg/about.jpeg);
     background-position: right 55%;
 }
-section#bg-order::before{
+header#bg-order::before{
     background-image: url(../img/bg/order.jpeg);
     background-position: right 30%;
 }

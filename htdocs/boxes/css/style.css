@@ -4,11 +4,11 @@
     margin: 0;
 }
 /* defines body background color and height to make it possible to apply 100% height to its children. 
-fixed position to make it not scrollable and no scale for smaller devices */
+makes all the children's position relative to the body */
 body{
     background-color: #59D6FF;
     height: 100%;
-    position: fixed;
+    position: relative;
 }
 /* a rectangle strip background with a little contrast color, some width and 100% height
 z-index puts the background behind kirby.
@@ -20,27 +20,24 @@ as the position is fixed, add some distance from left. */
     width: 500px;
     background-color: #0DC2FF;
     z-index: -4;
-    left: 25%;
-}
-/* defines the container of all kirby related parts, so that the position could be moved as a whole. */
-#kirby{
-    position: fixed;
+    left: calc(50% - 250px);
 }
 /* this is a set of same size triangles to create a pentagon decoration behind Kirby using z-index.
-put some top paddings to move it from top edge and fixed the position, add some distance away from left. */
+put some top paddings to move it from top edge and fixed the position, add some distance away from left.
+position it relatively for all the elements inside */
 .triangle-circle{
-    width: 100%;
     padding-top: 50px;
-    position: fixed;
-    left: 33%;
+    position: relative;
+    left: calc((100% - 500px) / 2);
     z-index: -1;
 }
 /* defines the triangle details using border, set the color, side lengths of the triangles. 
-fixed the postion */
+adjust the absolute postion */
 .triangle-circle > div{
-    position: fixed;
+    position: absolute;
+    left: 82px;
     border-style: solid;
-    border-width: 19em 0 10em 21em;
+    border-width: 304px 0 160px 336px;
     border-color: #FFF600 transparent transparent transparent;
 }
 /* there are 5 triangles that need to rotate 72degree from one another in order to form a pentagon shape.
@@ -57,6 +54,12 @@ except #c-1 which is originally 0 deg. */
 #c-5{
     transform: rotate(288deg);
 }
+/* defines the container of all kirby related parts, so that the position could be moved as a whole.
+set a absolute position to the middle of the screen width */
+#kirby{
+    position: absolute;
+    left: calc(50% - 250px);
+}
 /* this is kirby's body color with position and size set.
 as the individual body parts is made of various odd shapes borders, they could not cover everywhere when filled with color.
 this is a simple way to fill out the main color of the body so that it is coherent. */
@@ -64,8 +67,8 @@ this is a simple way to fill out the main color of the body so that it is cohere
     position: absolute;
     top: 133px;
     left: 93px;
-    width: 20em;
-    height: 19em;
+    width: 320px;
+    height: 304px;
     background-color: #FED5CE;
     border-radius: 50%;
 }
@@ -76,8 +79,8 @@ using border radius to draw lines of the shape, z-index made it not cover the fa
     position: absolute;
     top: 111px;
     left: 212px;
-    width: 3em;
-    height: 2em;
+    width: 48px;
+    height: 32px;
     background-color: #FF7D9F;
     z-index: -1;
     border-top: 5px solid black;
@@ -91,8 +94,8 @@ using border radius to draw lines of the shape, z-index made it not cover the fa
     position: absolute;
     top: 96px;
     left: 94px;
-    width: 8em;
-    height: 8em;
+    width: 128px;
+    height: 128px;
     background-color: #FF7D9F;
     z-index: -1;
     border-top: 5px solid black;
@@ -106,8 +109,8 @@ using border radius to draw lines of the shape, z-index made it not cover the fa
     position: absolute;
     top: 66px;
     left: 277px;
-    width: 9em;
-    height: 7em;
+    width: 144px;
+    height: 112px;
     background-color: #FF7D9F;
     z-index: -1;
     border-top: 5px solid black;
@@ -121,8 +124,8 @@ using border radius to draw lines of the shape, z-index made it not cover the fa
     position: absolute;
     top: 166px;
     left: 374px;
-    width: 3em;
-    height: 4em;
+    width: 48px;
+    height: 64px;
     background-color: #FF7D9F;
     z-index: -1;
     border-right: 5px solid black;
@@ -135,16 +138,16 @@ with proper position and size defined, rotate for coherence. */
     position: absolute;
     top:130px;
     left: 80px;
-    width: 20em;
-    height: 10em;
-    border-radius: 10em 10em 0 0;
+    width: 320px;
+    height: 160px;
+    border-radius: 160px 160px 0 0;
     border-top: 5px solid black;
     transform: rotate(-10deg);
 }
 /* this is the facial frame position of kirby, with children's position defined for easier adjustment. */
 .face{
     position: relative;
-    top: 204px;
+    top: 194px;
     left: 154px;
 }
 /* these are two ovals to form the black background of kirby's eyes.
@@ -152,8 +155,8 @@ as they are the same shape, so defined together with proper size and color, rota
 absolute position for precise adjustment. */
 #left-eye-bg, #right-eye-bg{
     position: absolute;
-    width: 3em;
-    height: 6em;
+    width: 48px;
+    height: 96px;
     background-color: black;
     border-radius: 50% 50% 49% 51% / 47% 48% 52% 53%;
     transform: rotate(3deg);
@@ -167,8 +170,8 @@ absolute position for precise adjustment. */
     position: absolute;
     top: 8px;
     left: 11px;
-    width: 1.5em;
-    height: 3em;
+    width: 24px;
+    height: 48px;
     background-color: white;
     border-radius: 50% 50% 49% 51% / 47% 48% 52% 53%;
 }
@@ -177,8 +180,8 @@ absolute position for precise adjustment. */
     position: absolute;
     top: 71px;
     left: 17px;
-    width: 1em;
-    height: 1.2em;
+    width: 16px;
+    height: 19.2px;
     background-color: white;
     border-radius: 50%;
 }
@@ -187,8 +190,8 @@ absolute position for precise adjustment. */
     position: absolute;
     top:81px;
     left: -41px;
-    width: 2.7em;
-    height: 2em;
+    width: 43.2px;
+    height: 32px;
     z-index: 1;
     background-color: #FEA7B0;
     border-radius: 50%;
@@ -200,8 +203,8 @@ absolute position for precise adjustment. */
 /* defines kirby's smiling mouth with a curve line, as well as position, color and size. */
 #mouth{
     position: absolute;
-    width: 1.8em;
-    height: 2em;
+    width: 28.8px;
+    height: 32px;
     top: 75px;
     left: 44px;
     border-bottom: 5px solid black;
@@ -213,8 +216,8 @@ rotate for proper looking. */
     position: absolute;
     top: 319px;
     left: 42px;
-    width: 7em;
-    height: 9em;
+    width: 112px;
+    height: 144px;
     background-color: #FF7D9F;
     border: 5px solid black;
     border-radius: 50%;
@@ -226,8 +229,8 @@ rotate for proper looking. */
     position: absolute;
     top: 301px;
     left: 286px;
-    width: 8em;
-    height: 9em;
+    width: 128px;
+    height: 144px;
     background-color: #FF7D9F;
     border: 5px solid black;
     border-radius: 50%;
@@ -239,8 +242,8 @@ rotate for proper looking. */
     position: absolute;
     top: 256px;
     left: 40px;
-    width: 5em;
-    height: 5em;
+    width: 80px;
+    height: 80px;
     background-color: #FED5CE;
     border-left:5px solid black;
     border-radius: 84% 0% 0% 16% / 79% 83% 20% 55%;
@@ -252,8 +255,8 @@ rotate for proper looking. */
     position: absolute;
     top: 253px;
     left: 367px;
-    width: 6em;
-    height: 7em;
+    width: 96px;
+    height: 112px;
     background-color: #FED5CE;
     border-right: 5px solid black;
     border-radius: 0% 65% 50% 0% / 0% 50% 52% 100%;
@@ -265,8 +268,8 @@ rotate for proper looking. z-index for not covering the limbs of kirby. */
     position: absolute;
     top:339px;
     left: 161px;
-    width: 9em;
-    height: 6em;
+    width: 144px;
+    height: 96px;
     background-color: #FED5CE;
     z-index: -1;
     border-bottom: 5px solid black;

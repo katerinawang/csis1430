@@ -1,3 +1,4 @@
+/* default configs */
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Bangers&family=Hind+Siliguri:wght@300&family=Righteous&display=swap');
 :root{
     --theme-color: #f77808;
@@ -28,6 +29,7 @@ body{
 p{
     text-align: left;
 }
+/* header section */
 header{
     position: relative;
     height: 200px;
@@ -91,6 +93,7 @@ h1{
     opacity: .9;
     color: var(--basic-font-color);
 }
+/* main section */
 main{
     display: flex;
 }

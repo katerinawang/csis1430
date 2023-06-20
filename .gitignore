@@ -108,7 +108,7 @@ Thumbs.db
 *.pem
 
 # ignore custom dirs
-test/
+temp/
 
 # --------------------------------------------------------
 # BEGIN Explictly Allowed Files (i.e. do NOT ignore these)

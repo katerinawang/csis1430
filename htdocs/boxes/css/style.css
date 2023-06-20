@@ -3,33 +3,42 @@
     padding: 0;
     margin: 0;
 }
-/* defines body background color. */
+/* defines body background color and height to make it possible to apply 100% height to its children. 
+fixed position to make it not scrollable and no scale for smaller devices */
 body{
     background-color: #59D6FF;
+    height: 100%;
+    position: fixed;
 }
-/* a rectangle frame with color, width and height, set margin auto to put the background in the middle horizontally.
-set every child's position relatively for easier adjustment. 
-z-index puts the background behind kirby.*/
+/* a rectangle strip background with a little contrast color, some width and 100% height
+z-index puts the background behind kirby.
+fixed position to make it not scrollable and no scale for smaller devices.
+as the position is fixed, add some distance from left. */
 #layer{
-    height: 100vh;
-    width: 40%;
+    height: 100%;
+    position: fixed;
+    width: 500px;
     background-color: #0DC2FF;
-    z-index: 1;
-    position: relative;
-    margin: auto;
+    z-index: -4;
+    left: 25%;
 }
-/* this is a set of same size triangles to create a pentagon decoration.
-as it is a background, the z-index set it on the bottom of the frame.
-put some left margin to move it from original position and made every child's position relative for easier adjustment */
+/* defines the container of all kirby related parts, so that the position could be moved as a whole. */
+#kirby{
+    position: fixed;
+}
+/* this is a set of same size triangles to create a pentagon decoration behind Kirby using z-index.
+put some top paddings to move it from top edge and fixed the position, add some distance away from left. */
 .triangle-circle{
-    position: relative;
-    margin-left: 15%;
-    z-index: -2;
+    width: 100%;
+    padding-top: 50px;
+    position: fixed;
+    left: 33%;
+    z-index: -1;
 }
-/* defines the triangle details using border, set the color, position and side lengths of the triangles. */
+/* defines the triangle details using border, set the color, side lengths of the triangles. 
+fixed the postion */
 .triangle-circle > div{
-    position: absolute;
-    top: 10vh;
+    position: fixed;
     border-style: solid;
     border-width: 19em 0 10em 21em;
     border-color: #FFF600 transparent transparent transparent;
@@ -47,10 +56,6 @@ except #c-1 which is originally 0 deg. */
 }
 #c-5{
     transform: rotate(288deg);
-}
-/* defines the container of all kirby parts, so that kirby position could be moved as a whole. */
-#kirby{
-    position: relative;
 }
 /* this is kirby's body color with position and size set.
 as the individual body parts is made of various odd shapes borders, they could not cover everywhere when filled with color.
@@ -266,14 +271,4 @@ rotate for proper looking. z-index for not covering the limbs of kirby. */
     z-index: -1;
     border-bottom: 5px solid black;
     border-radius: 30% 70% 47% 68% / 66% 57% 20% 35%;
-}
-/* some small position adjustments for responsive view. */
-@media only screen and (max-width: 600px) {
-    .triangle-circle > div{
-        top: 10vh;
-        left: -30vmin;
-    }
-    #kirby{
-        left: -44vmin;
-    }
 }

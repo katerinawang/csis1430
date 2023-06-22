@@ -121,3 +121,4 @@ temp/
 !.gitignore
 !.nvmrc
 !.phpcs.xml.dist
+htdocs/photoshop/img/license/license.html

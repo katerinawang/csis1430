@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Semi+Condensed:wght@400;500&family=Ubuntu:wght@400;500&display=swap');
+/* reset initial margin and padding, define every block box-sizing */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ /*define variables: color, font families */
+:root{
+    --defined-color: #d3d6da;
+    --title-font: 'Ubuntu', sans-serif;
+    --key-font: 'Sofia Sans Semi Condensed', sans-serif;
+}
+/* header section grid defined, comprises three dives */
+header{
+    display: grid;
+    height: 50px;
+    align-items: center;
+    border-bottom: 1px solid var(--defined-color);
+    grid-template-columns: repeat(3, 1fr);
+}
+/* as the picture is only a hamburger menu icon, only the icon displayed */
+nav{
+    padding: 0 15px;
+}
+/* title centered */
+div#title{
+    margin: 0 auto;
+}
+/* font family defined */
+#title h1{
+    font-family: var(--title-font);
+}
+/* right bar position and padding */
+div#right-bar{
+    text-align: right;
+    padding: 0 15px;
+}
+/* align right bar element */
+div#right-bar div{
+    display: inline-block;
+    padding: 0 3px;
+}
+/* main section size and block */
+main{
+    display: block;
+    width: 100%;
+    height: calc(100% - 50px);
+}
+/* grid section 5 x 6 grid wrapper */
+.grid-wrapper{
+    margin: calc(50vh - 260px) auto;
+    width: 250px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+/* grid element */
+.grid-wrapper div{
+    border: 1px solid var(--defined-color);
+    margin: 2px;
+}
+/* keyboard section */
+/* define keyboard wrapper size and position */
+.keyboard{
+    width: 500px;
+    height: 160px;
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+/* each row of keyboard */
+.line-1, .line-2, .line-3{
+    display: block;
+    margin: 5px auto;
+}
+/* each key defined */
+.line-1 div, .line-2 div, .line-3 div{
+    display: inline-block;
+    font-family: var(--key-font);
+    font-size: 15px;
+    width: 35px;
+    padding: 15px 0;
+    margin: 0 2px;
+    background-color: var(--defined-color);
+    border: 1px solid var(--defined-color);
+    border-radius: 3px;
+}
+/* adjust 'enter' and 'delete' key */
+.line-3 div:first-child{
+    width: 57px;
+    height: 50px;
+    vertical-align: bottom;
+    font-size: 12px;
+}
+.line-3 div:last-child{
+    width: 57px;
+    height: 50px;
+}
+.line-3 div img{
+    vertical-align: bottom;
+    margin: 0 auto;
+    width: 18px;
+}

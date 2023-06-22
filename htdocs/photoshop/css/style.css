@@ -70,7 +70,9 @@ main{
     width: 500px;
     height: 160px;
     display: block;
-    margin: auto;
+    position: absolute;
+    left: calc(50% - 250px);
+    bottom: 10px;
     text-align: center;
 }
 /* each row of keyboard */

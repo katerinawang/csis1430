@@ -92,7 +92,7 @@ main{
     border: 1px solid var(--defined-color);
     border-radius: 3px;
 }
-/* adjust 'enter' and 'delete' key: width, height, position and vertical alignment*/
+/* adjust 'enter' and 'delete' key: width, height, position and vertical lignment*/
 .line-3 div:first-child{
     width: 57px;
     height: 50px;

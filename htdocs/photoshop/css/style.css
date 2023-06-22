@@ -11,6 +11,9 @@
     --title-font: 'Ubuntu', sans-serif;
     --key-font: 'Sofia Sans Semi Condensed', sans-serif;
 }
+body{
+    height: fit-content;
+}
 /* header section grid defined, comprises three dives */
 header{
     display: grid;
@@ -49,7 +52,7 @@ main{
 }
 /* grid section 5 x 6 grid wrapper */
 .grid-wrapper{
-    margin: calc(50vh - 260px) auto;
+    margin: 130px auto;
     width: 250px;
     height: 300px;
     display: grid;

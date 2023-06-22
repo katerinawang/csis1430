@@ -75,7 +75,7 @@ main{
     display: block;
     margin: 5px auto;
 }
-/* each key defined */
+/* each key shape, margin, padding, font-family and background color defined */
 .line-1 div, .line-2 div, .line-3 div{
     display: inline-block;
     font-family: var(--key-font);
@@ -87,7 +87,7 @@ main{
     border: 1px solid var(--defined-color);
     border-radius: 3px;
 }
-/* adjust 'enter' and 'delete' key */
+/* adjust 'enter' and 'delete' key: width, height, position and vertical lignment*/
 .line-3 div:first-child{
     width: 57px;
     height: 50px;

@@ -11,9 +11,6 @@
     --title-font: 'Ubuntu', sans-serif;
     --key-font: 'Sofia Sans Semi Condensed', sans-serif;
 }
-body{
-    height: fit-content;
-}
 /* header section grid defined, comprises three dives */
 header{
     display: grid;
@@ -52,7 +49,7 @@ main{
 }
 /* grid section 5 x 6 grid wrapper */
 .grid-wrapper{
-    margin: 130px auto;
+    margin: calc(50vh - 260px) auto;
     width: 250px;
     height: 300px;
     display: grid;
@@ -70,9 +67,7 @@ main{
     width: 500px;
     height: 160px;
     display: block;
-    position: absolute;
-    left: calc(50% - 250px);
-    bottom: 10px;
+    margin: auto;
     text-align: center;
 }
 /* each row of keyboard */
@@ -92,7 +87,7 @@ main{
     border: 1px solid var(--defined-color);
     border-radius: 3px;
 }
-/* adjust 'enter' and 'delete' key: width, height, position and vertical lignment*/
+/* adjust 'enter' and 'delete' key: width, height, position and vertical alignment*/
 .line-3 div:first-child{
     width: 57px;
     height: 50px;

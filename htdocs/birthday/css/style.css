@@ -15,7 +15,7 @@ body{
     background-color: #f77808;
 }
 #wrapper{
-    /*display: none;*/
+    opacity: 0;
     margin: var(--card-vertical-margin) auto;
     width: 600px;
     height: var(--card-height);

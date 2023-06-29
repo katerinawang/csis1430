@@ -49,7 +49,10 @@ function greetings(){
 window.onload = function () {
     let opening = document.getElementById("opening");
     let greeting = document.getElementById("greeting");
+    let wrapper = document.getElementById("wrapper");
     let list = greetings();
+    wrapper.style.opacity = 1;
+    wrapper.style.transition = "opacity .5s ease-in-out";
     opening.innerHTML = "Dear " + list[0] + ",";
     greeting.innerHTML = "Congratulations on turning " + list[1] + " today!<br>May your special day be as radiant as " + list[4] + " " + list[5] + " in " + list[3] + "!";
 }

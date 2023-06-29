@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 30px;
+    font-family: 'Patrick Hand SC', cursive;
+    color: #f77808;
+}
+:root{
+    --card-height: calc(100vh / 2);
+    --card-vertical-margin: calc(100vh / 4);
+}
+body{
+    background-color: #f77808;
+}
+#wrapper{
+    /*display: none;*/
+    margin: var(--card-vertical-margin) auto;
+    width: 600px;
+    height: var(--card-height);
+    background-color: ghostwhite;
+}
+#border{
+    margin: 10px;
+    position: relative;
+    top: 10px;
+    height: calc(var(--card-height) - 20px);
+    border: 10px dashed #11A85C;
+}
+#content{
+    margin: 20px;
+    text-align: center;
+}
+#opening{
+
+}
+#greeting{
+    margin-top: 40px;
+    position: relative;
+}
+#greeting::after{
+    content: url("../img/001-confetti.png");
+    padding: 0 10px;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="desc">
+            <h1>Lotto Generator</h1>
+            <p>This lotto generator will generate N pairs of two-digit integers that user input.</p>
+        </div>
+        <div id="main">
+            <p id="lotto">click <span class="material-icons inline">casino</span> to generate, click <span class="material-icons inline">refresh</span> to re-roll.</p>
+            <button type="submit" onclick="lottoGen(lotto)" title="generate new pair"><span class="material-icons">casino</span></button>
+            <button type="submit" onclick="lottoReRoll(lotto)" title="re-roll number"><span class="material-icons">refresh</span></button>
+        </div>
+    </div>
+</body>
+</html>

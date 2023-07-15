@@ -96,7 +96,7 @@ function madLibs(){
             if (!err) {
                 storyGen(Object.values(wordList));
             }
-        }, 300);
+        }, 500);
     }
 }
 function randomWords(){

@@ -8,20 +8,18 @@ function checkWord(word){
         }
     };
     try {
-        let response = fetch(url, options).then(async (data) => {
-            if (!data.ok){
+        return fetch(url, options).then(async (data) => {
+            if (!data.ok) {
                 content.innerHTML = "<p>no such word called " + word + "!</p>";
-            }
-            else {
+            } else {
                 data = await data.json();
                 let speech = [];
-                for (let i = 0; i < data['results'].length; i++){
+                for (let i = 0; i < data['results'].length; i++) {
                     speech.push(data['results'][i]['partOfSpeech']);
                 }
                 return speech;
             }
         });
-        return response;
     } catch (error) {
         console.log(error);
     }
@@ -91,11 +89,20 @@ function randomWords(){
     let a2 = document.getElementById("word-adj-2");
     n1.value = animals[randInt(0, animals.length - 1)].toLowerCase();
     n2.value = animals[randInt(0, animals.length - 1)].toLowerCase();
-    v1.value = verbs[randInt(0, verbs.length - 1)].toLowerCase();
-    v2.value = verbs[randInt(0, verbs.length - 1)].toLowerCase();
-    v3.value = verbs[randInt(0, verbs.length - 1)].toLowerCase();
-    a1.value = adjectives[randInt(0, adjectives.length - 1)].toLowerCase();
-    a2.value = adjectives[randInt(0, adjectives.length - 1)].toLowerCase();
+    randomWord('verb').then(res => v1.value = res);
+    randomWord('verb').then(res => v2.value = res);
+    randomWord('verb').then(res => v3.value = res);
+    randomWord('adjective').then(res => a1.value = res);
+    randomWord('adjective').then(res => a2.value = res);
+}
+function randomWord(p){
+    let url = 'https://random-words-api.vercel.app/word/' + p;
+    return fetch(url, {
+        method: 'GET'
+    }).then(async (res) => {
+        res = await res.json();
+        return res[0]['word'].toLowerCase();
+    });
 }
 function randInt(min, max) { // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min)

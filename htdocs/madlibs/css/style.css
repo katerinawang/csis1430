@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner&family=Nerko+One&family=Patrick+Hand+SC&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --background-img: url(../img/paper.webp);
+    --label-font: 'Patrick Hand SC', cursive;
+    --input-font: 'Edu TAS Beginner', cursive;
+    --header-font: 'Nerko One', cursive;
+}
+body{
+    background-image: var(--background-img);
+    color: #666;
+}
+div#container{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    margin: 30px;
+}
+div#left, div#right{
+    position: relative;
+    margin: 20px;
+}
+div#left{
+    border-right: 1px dashed #b7b7b7;
+}
+label{
+    font-family: var(--label-font);
+    font-size: 20px;
+    font-style: italic;
+}
+input{
+    display: block;
+    font-family: var(--input-font);
+    font-size: 20px;
+    margin: 10px 0;
+    width: 180px;
+    border: none;
+    color: #666;
+    border-bottom: 1px solid #666;
+    background-color: transparent;
+}
+input:focus{
+    outline: none;
+}
+button{
+    display: inline-block;
+    padding: 5px;
+    margin: 10px auto;
+    font-family: var(--label-font);
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #666;
+}
+h2{
+    font-family: var(--header-font);
+    font-size: 50px;
+    text-align: center;
+}
+p{
+    font-family: var(--input-font);
+    font-size: 40px;
+    margin-top: 30px;
+}

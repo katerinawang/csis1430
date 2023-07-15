@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <script src="js/animals.js"></script>
+    <script src="js/verbs.js"></script>
+    <script src="js/adjectives.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <div id="left">
+            <div id="content">
+                <p>input every word to get the full story</p>
+            </div>
+        </div>
+        <div id="right">
+            <form action="javascript:void(0);">
+                <label for="word-noun-1">Noun #1</label>
+                <input type="text" name="word-noun-1" id="word-noun-1">
+                <label for="word-noun-2">Noun #2</label>
+                <input type="text" name="word-noun-2" id="word-noun-2">
+                <label for="word-verb-1">Verb #1</label>
+                <input type="text" name="word-verb-1" id="word-verb-1">
+                <label for="word-verb-2">Verb #2</label>
+                <input type="text" name="word-verb-2" id="word-verb-2">
+                <label for="word-verb-3">Verb #3</label>
+                <input type="text" name="word-verb-3" id="word-verb-3">
+                <label for="word-adj-1">Adjective #1</label>
+                <input type="text" name="word-adj-1" id="word-adj-1">
+                <label for="word-adj-2">Adjective #2</label>
+                <input type="text" name="word-adj-2" id="word-adj-2">
+                <button type="submit" onclick="madLibs();">Generate</button>
+                <button type="submit" onclick="randomWords();">Random Words</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/node_modules/pluralize/pluralize.js"></script>
+    <script>const content = document.getElementById("content");</script>
+</body>
+</html>

@@ -26,6 +26,9 @@ div#left, div#right{
 div#left{
     border-right: 1px dashed #b7b7b7;
 }
+div#content{
+    margin: 25px;
+}
 label{
     font-family: var(--label-font);
     font-size: 20px;
@@ -56,11 +59,24 @@ button{
 }
 h2{
     font-family: var(--header-font);
-    font-size: 50px;
+    font-size: 45px;
     text-align: center;
+    color: rgba(102, 102, 102, 0.91);
+    text-decoration: 2px underline rgba(102, 102, 102, 0.55);
+    text-underline-offset: 20px;
 }
 p{
     font-family: var(--input-font);
-    font-size: 40px;
-    margin-top: 30px;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+}
+p#note{
+    font-size: 18px;
+    color: rgba(255, 117, 51, 0.8);
+}
+p#story{
+    margin-top: 20px;
+    text-align: left;
+    padding: 30px;
 }

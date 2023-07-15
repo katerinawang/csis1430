@@ -10,7 +10,7 @@ function checkWord(word){
     try {
         return fetch(url, options).then(async (data) => {
             if (!data.ok) {
-                content.innerHTML = "<p>no such word called " + word + "!</p>";
+                return 0;
             } else {
                 data = await data.json();
                 let speech = [];
@@ -53,30 +53,50 @@ function madLibs(){
     wordList.a1 = document.getElementById("word-adj-1").value;
     wordList.a2 = document.getElementById("word-adj-2").value;
     if (Object.values(wordList).includes('')){
-        content.innerHTML = "<p>please input all field in order to generate!</p>";
+        content.getElementsByTagName('p')[0].innerHTML = "please input all field in order to generate!";
     }else {
+        let err = false;
         for (let word of Object.values(wordList).slice(0, 2)) {
             checkWord(word).then((res) => {
+                if (!res){
+                    content.getElementsByTagName('p')[0].innerHTML = "no such word called " + word + "!"
+                    err = true;
+                }
                 if (!res.includes('noun')) {
-                    content.innerHTML = "<p>" + word + " is not proper part of speech!</p>";
+                    content.getElementsByTagName('p')[0].innerHTML = word + " is not proper part of speech!";
+                    err = true;
                 }
             });
         }
         for (let word of Object.values(wordList).slice(2, 5)) {
             checkWord(word).then((res) => {
+                if (!res){
+                    content.getElementsByTagName('p')[0].innerHTML = "no such word called " + word + "!"
+                    err = true;
+                }
                 if (!res.includes('verb')) {
-                    content.innerHTML = "<p>" + word + " is not proper part of speech!</p>";
+                    content.getElementsByTagName('p')[0].innerHTML = word + " is not proper part of speech!";
+                    err = true;
                 }
             });
         }
         for (let word of Object.values(wordList).slice(5)) {
             checkWord(word).then((res) => {
+                if (!res){
+                    content.getElementsByTagName('p')[0].innerHTML = "no such word called " + word + "!"
+                    err = true;
+                }
                 if (!res.includes('adjective')) {
-                    content.innerHTML = "<p>" + word + " is not proper part of speech!</p>";
+                    content.getElementsByTagName('p')[0].innerHTML = word + " is not proper part of speech!";
+                    err = true;
                 }
             });
         }
-        storyGen(Object.values(wordList));
+        setTimeout(() => {
+            if (!err) {
+                storyGen(Object.values(wordList));
+            }
+        }, 300);
     }
 }
 function randomWords(){

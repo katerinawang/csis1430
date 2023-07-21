@@ -14,7 +14,7 @@ window.onload = function (){
     tieSound = new Audio("sound/tie.mp3");
     winSound = new Audio("sound/win.mp3");
     wins = [0, 0, 0];
-    winCode = [14, 112, 146, 168, 292, 546, 584, 896];
+    winCode = [7, 56, 73, 84, 146, 273, 292, 448];
     msg = document.getElementById("msg");
     signs = ["<img src='img/001-circle.png' alt='O'/>", "<img src='img/002-cancel.png' alt='X'>"];
     turn = 0;
@@ -54,8 +54,6 @@ function start(){
     score = [0, 0];
     gameOver = false;
     turn = 0;
-    // win1.innerText = players[0] + ": " + wins[0];
-    // win2.innerText = players[1] + ": " + wins[1];
     msg.innerText = players[turn] + '\'s Turn Now';
     removeProperty();
     displayGameBoard();
@@ -67,11 +65,11 @@ function win(){
             return true;
         }
     }
-    gameOver = score[0] + score[1] === 1022;
+    gameOver = score[0] + score[1] === 511;
     return false;
 }
 function displayGameBoard(){
-    let bit = 2;
+    let bit = 1;
     let divs = "";
     gameBoard.innerHTML = divs;
     for (let i = 0; i < 3; i++){

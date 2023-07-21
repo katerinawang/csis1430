@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div id="container">
+        <table id="score-board">
+            <tr><th>Score</th></tr>
+            <tr><td id="win-1"></td><td id="score-1"></td></tr>
+            <tr><td id="win-2"></td><td id="score-2"></td></tr>
+            <tr><td id="ties">Ties:</td><td id="score-3">0</td></tr>
+        </table>
+        <h1 id="msg">Tic Tac Toe</h1>
+        <div id="player-info">
+            <h2>Player's Name</h2>
+            <form action="javascript:void(0);">
+                <input type="text" name="p1" id="p1" placeholder="Player1">
+                <input type="text" name="p2" id="p2" placeholder="Player2">
+            </form>
+            <button id="start" type="submit" onclick="start();">Start ></button>
+        </div>
+        <div id="game">
+        </div>
+    </div>
+</body>
+</html>

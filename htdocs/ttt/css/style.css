@@ -14,31 +14,52 @@
 body{
     background-image: var(--background-img);
 }
+#container{
+    display: grid;
+    grid-template-rows: 130px 1fr;
+    margin: 20px;
+}
 h1{
     font-family: var(--h1-font);
     font-size: 35px;
     letter-spacing: 2px;
+}
+#score-board{
+    border-collapse: collapse;
 }
 h2, th{
     font-family: var(--h2-font);
     font-size: 25px;
     margin-bottom: 10px;
 }
-button{
-    font-family: var(--p-font);
-    font-size: 20px;
+th{
+    background-color: #777;
+    color: white;
 }
 tr{
     font-family: var(--h2-font);
     color: #555;
+    text-align: center;
     font-size: 20px;
 }
-td[id^="score-"]{
-    text-align: right;
-    color: rgba(255, 61, 79, 0.91);
-    width: 30px;
+#win-1, #ties, #win-2{
+    padding: 5px;
+}
+tr td p{
+    color: white;
+}
+#win-1, #score-1{
+    background-color: #f77808;
+}
+#ties, #score-3{
+    background-color: black;
+}
+#win-2, #score-2{
+    background-color: #4699ff;
 }
 button{
+    font-family: var(--p-font);
+    font-size: 20px;
     margin: 10px;
     padding: 5px;
     border: 2px solid black;
@@ -52,17 +73,12 @@ button:hover{
     cursor: pointer;
     transition: all 0.1s ease-in-out;
 }
-#container{
-    display: grid;
-    grid-template-rows: 130px 1fr;
-    margin: 20px;
-}
 #msg{
     grid-column: 1 / 6;
     text-align: center;
 }
 #score-board, #game, #player-info{
-    margin: 10px;
+    margin: 10px 20px;
 }
 #score-board{
     display: none;
@@ -86,7 +102,6 @@ button:hover{
     grid-column: 1 / 6;
     text-align: center;
     margin: 10px auto;
-    /*width: 200px;*/
 }
 input{
     border: none;

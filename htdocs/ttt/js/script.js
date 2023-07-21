@@ -1,4 +1,4 @@
-let p1, p2, gameBoard, scoreBoard, signs, turn, ctrl, players, msg, winCode, score, gameOver, wins, info, wrapper, win1, win2, score1, score2, score3, ties;
+let p1, p2, gameBoard, scoreBoard, signs, turn, ctrl, players, msg, winCode, score, gameOver, wins, info, wrapper, win1, win2, score1, score2, score3, ties, tieSound, winSound;
 window.onload = function (){
     wrapper = document.getElementById("container");
     scoreBoard = document.getElementById("score-board");
@@ -11,6 +11,8 @@ window.onload = function (){
     score1 = document.getElementById("score-1")
     score2 = document.getElementById("score-2")
     score3 = document.getElementById("score-3")
+    tieSound = new Audio("sound/tie.mp3");
+    winSound = new Audio("sound/win.mp3");
     wins = [0, 0, 0];
     winCode = [14, 112, 146, 168, 292, 546, 584, 896];
     msg = document.getElementById("msg");
@@ -24,15 +26,15 @@ function steps(el, num){
         if (win()) {
             msg.innerText = players[turn] + " Wins!";
             wins[turn] += 1;
-
             score1.innerText = wins[0];
-
             score2.innerText = wins[1];
+            winSound.play();
             info.innerHTML = "<button id=\"start\" type=\"submit\" onclick=\"start();\">Play Again?</button>";
         }else if (gameOver){
             msg.innerText = "Tie!";
             wins[2] += 1;
             score3.innerText = wins[2];
+            tieSound.play();
             info.innerHTML = "<button id=\"start\" type=\"submit\" onclick=\"start();\">Play Again?</button>";
         }
         else {
@@ -89,8 +91,8 @@ function removeProperty(){
         msg.style.gridColumn = "2 / 5";
         info.style.gridColumn = "5 / 6";
         info.style.width = "200px";
-        win1.innerText = players[0] + ": ";
-        win2.innerText = players[1] + ": ";
+        win1.innerText = players[0];
+        win2.innerText = players[1];
         score1.innerText = "0";
         score2.innerText = "0";
     }

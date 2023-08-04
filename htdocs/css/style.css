@@ -61,7 +61,7 @@ iframe{
  /* small screen */
 @media (max-width: 767px) {
     #reflection p{
-        font-size: 10px;
+        font-size: 9px;
     }
     .scroll-arrow{
         position: absolute;

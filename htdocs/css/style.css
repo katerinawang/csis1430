@@ -63,6 +63,9 @@ iframe{
     #reflection p{
         font-size: 9px;
     }
+    #quote{
+        padding-top: 5vh;
+    }
     .scroll-arrow{
         position: absolute;
         top: 80vh;
@@ -96,6 +99,9 @@ iframe{
     #reflection p{
         font-size: 13px;
     }
+    #quote{
+        padding-top: 5vh;
+    }
     .scroll-arrow{
         position: absolute;
         top: 80vh;
@@ -118,7 +124,10 @@ iframe{
         top: 80vh;
         left: 0;
     }
-
+    #quote{
+        padding-top: 5vh;
+        width: 50vw;
+    }
     .carousel-inner .carousel-item-end.active,
     .carousel-inner .carousel-item-next {
         transform: translateX(33%);

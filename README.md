@@ -1,4 +1,8 @@
 # csis1430
-Source code for all CSIs 1430 project
-Using AWS Amplify to deploy the static website
+Source code for CSIS 1430 project
+
+
+Deployed by AWS Amplify
+
+
 Link: https://katerina.wang

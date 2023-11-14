@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Ideas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+</head>
+</head>
+<body>
+<div class="header">
+    <h1>Your Ideas, Your Choice</h1>
+</div>
+<div class="nav-menu">
+    <a href="#">Home</a>
+    <a href="credentials.html">Credentials</a>
+</div>
+<div class="main-content">
+<!--    <h2>Title of Your Idea</h2>-->
+    <div class="card-container">
+        <div class="card active" style="background: #FFF0C2" onclick="switchCard()">
+            <div class="card-title">Which One You Prefer?</div>
+            <div class="card-content">
+                <div class="inline-block">
+                    <div class="image-button-block">
+                        <img src="img/apple.gif" alt="First Image Description">
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="inline-block">
+                    <div class="image-button-block">
+                        <img src="img/grapes.gif" alt="Second Image Description">
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="inline-block">
+                    <div class="image-button-block">
+                        <img src="img/pineapple.gif" alt="Second Image Description">
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background: #C2CDFF" onclick="switchCard()">
+            <div class="card-title">Any other adorable kind you love?</div>
+            <div class="card-content">
+                <div class="inline-block">
+                    <div class="image-button-block">
+                        <img src="img/dog.gif" alt="First Image Description">
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="inline-block">
+                    <div class="image-button-block">
+                        <img src="img/cat.gif" alt="Second Image Description">
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="inline-block">
+                    <div class="image-button-block">
+                        <img src="img/turtle.gif" alt="Second Image Description">
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background: #C2FFCD" onclick="switchCard()">
+            <div class="card-title">how about your aesthetic preference?</div>
+            <div class="card-content">
+                <div class="inline-block">
+                    <div class="image-button-block">
+                        <img src="img/ancient.png" alt="ancient_art">
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+                <div class="inline-block">
+                    <div class="image-button-block">
+                        <img src="img/abstract.png" alt="abstract_art">
+                        <button><i class="fas fa-heart"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card" style="background: #C2EDFF" onclick="switchCard()">
+            <div class="card-content">
+                <div class="heading-container">
+                    <h2 class="fade-in" style="--delay:0s;">Have you noticed one thing?</h2>
+                    <h2 class="fade-in" style="--delay:1s;">that..</h2>
+                    <h1 class="fade-in" style="--delay:2s;">you don't have other <em>choices</em></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="new-main-section section-size" style="display: none;">
+        <div class="card-style">
+            <h2>there is a choice</h2>
+            <h1>respect and include everyone</h1>
+            <h3>Together</h3>
+            <h3>we can create a world where everyone belongs.</h3>
+        </div>
+    </div>
+    <div class="restart-icon-container" id="restartIconContainer" style="display: none;">
+        <div class="restart-icon" onclick="restartCards()">
+            <i class="fas fa-redo"></i> <!-- Font Awesome restart icon -->
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <p>@Zhihong Wang</p>
+</div>
+<script src="cardSwitch.js"></script>
+</body>
+</html>

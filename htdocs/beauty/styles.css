@@ -1,0 +1,225 @@
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+.header {
+    background-color: #ffc0cb; /* Light pink background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+.main-content {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.nav-menu {
+    background-color: #fff;
+    text-align: center;
+    padding: 1px 0;
+}
+.nav-menu a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav-menu a:hover {
+    background-color: #ddd;
+    color: black;
+}
+/* ... other styles ... */
+
+.image-button-block {
+    display: inline-block;
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #ddd; /* Add a border for card style */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Add some shadow for depth */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 5px; /* Optional: rounded corners */
+    background: #fff1de;
+}
+
+.image-button-block img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Adjust as needed */
+    border-top-left-radius: 5px; /* Match border-radius of card */
+    border-top-right-radius: 5px; /* Match border-radius of card */
+}
+
+/*.image-button-block button {*/
+/*    display: block;*/
+/*    margin: 10px auto;*/
+/*    width: 80%; !* Adjust as needed *!*/
+/*}*/
+
+.image-button-block:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+.image-button-block:hover i {
+    color: orangered;
+}
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+button:focus {
+    outline: none;
+}
+
+/* If using Font Awesome */
+button i {
+    font-size: 20px;
+}
+/* If using an image */
+button img {
+    display: block;
+}
+
+
+/* ... other styles ... */
+.card-container {
+    width: 70%; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    position: relative; /* Changed to relative */
+    margin: 20px 0;
+    perspective: 1000px;
+}
+.card {
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Full height of the container */
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This centers the content vertically */
+    align-items: center; /* This centers the content horizontally */
+    text-align: center; /* This ensures the text is centered */
+    top: 0;
+    left: 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: transform 0.6s, opacity 0.6s;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    opacity: 0;
+    transform: rotateY(-180deg);
+}
+
+.card.active {
+    opacity: 1;
+    transform: rotateY(0deg);
+}
+
+.card-title {
+    text-align: center;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.card-content {
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.inline-block {
+    width: 30%; /* Adjust as needed */
+    text-align: center;
+}
+.heading-container {
+    text-align: center;
+    /* Other styling as needed */
+}
+
+.card .fade-in {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.card.active .fade-in {
+    animation: fadeInAnimation 1s ease forwards;
+}
+
+.card.active .fade-in:nth-child(1) { animation-delay: 0s; }
+.card.active .fade-in:nth-child(2) { animation-delay: 2s; }
+.card.active .fade-in:nth-child(3) { animation-delay: 3s; }
+
+@keyframes fadeInAnimation {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.card-container, .new-main-section {
+    transition: transform 0.5s ease-in-out;
+    will-change: transform; /* Optimizes animations */
+}
+.new-main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Other styling as needed */
+}
+.card-style {
+    width: 80%; /* Adjust based on your layout */
+    height: 200px;
+    color: white;
+    margin: auto; /* Center the card in the section */
+    padding: 20px; /* Add some padding inside the card */
+    background-color: #456E80; /* Card background color */
+    border: 1px solid #ddd; /* Card border */
+    border-radius: 5px; /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Card shadow for depth */
+    /* Add other styles as needed */
+}
+
+.slide-out {
+    transform: translateX(-100%); /* Slide out to the left */
+}
+
+.slide-in {
+    display: block;
+    transform: translateX(0); /* Slide in from the right */
+}
+.restart-icon-container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 20px; /* Adjust the height as needed */
+}
+.restart-icon {
+    cursor: pointer;
+    font-size: 24px; /* Adjust as needed */
+    color: red; /* Replace with your preferred color */
+}
+.section-size {
+    width: 70%; /* Adjust based on your layout */
+    height: 300px; /* Adjust based on your content */
+    margin: auto; /* Center the section */
+    /* Add other common size-related styles here */
+}
+.card, .card-style {
+    /* Adjust the styles for the inner content of the cards and new main section */
+    padding: 20px;
+    /* Other styling as needed */
+}
+
+.footer {
+    position: fixed;
+    background-color: #ffc0cb;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}

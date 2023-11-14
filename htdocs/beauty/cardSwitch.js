@@ -11,7 +11,7 @@ function switchCard() {
         setTimeout(() => {
             cardContainer.style.display = 'none';
             showNewMainSection();
-        }, 500); // Match this timeout with your CSS transition duration
+        }, 500); // Match this timeout with CSS transition duration
     } else {
         // Normal card switching logic
         cards[currentCard].classList.remove('active');

@@ -171,7 +171,7 @@ button img {
     /* Other styling as needed */
 }
 .card-style {
-    width: 80%; /* Adjust based on your layout */
+    width: 80%; /* Adjust based on layout */
     height: 200px;
     color: white;
     margin: auto; /* Center the card in the section */
@@ -200,11 +200,11 @@ button img {
 .restart-icon {
     cursor: pointer;
     font-size: 24px; /* Adjust as needed */
-    color: red; /* Replace with your preferred color */
+    color: red;
 }
 .section-size {
-    width: 70%; /* Adjust based on your layout */
-    height: 300px; /* Adjust based on your content */
+    width: 70%; /* Adjust based on layout */
+    height: 300px; /* Adjust based on content */
     margin: auto; /* Center the section */
     /* Add other common size-related styles here */
 }

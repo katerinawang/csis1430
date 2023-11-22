@@ -1,16 +1,20 @@
-body {
+body, html {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
+    height: 100%;
     background-color: #f0f0f0;
 }
 .header {
+    height: 10vh;
+    width: 100%;
     background-color: #ffc0cb; /* Light pink background */
     color: white;
     text-align: center;
     padding: 10px 0;
 }
 .main-content {
+    height: 70vh;
     padding: 20px;
     text-align: center;
     display: flex;
@@ -19,6 +23,7 @@ body {
     justify-content: center;
 }
 .nav-menu {
+    height: 6vh;
     background-color: #fff;
     text-align: center;
     padding: 1px 0;
@@ -54,13 +59,6 @@ body {
     border-top-left-radius: 5px; /* Match border-radius of card */
     border-top-right-radius: 5px; /* Match border-radius of card */
 }
-
-/*.image-button-block button {*/
-/*    display: block;*/
-/*    margin: 10px auto;*/
-/*    width: 80%; !* Adjust as needed *!*/
-/*}*/
-
 .image-button-block:hover {
     box-shadow: 0 5px 15px rgba(0,0,0,0.3); /* Enhanced shadow on hover */
     transform: translateY(-5px); /* Slight lift effect */
@@ -82,6 +80,9 @@ button:focus {
 /* If using Font Awesome */
 button i {
     font-size: 20px;
+}
+i:hover{
+    color: #ffc0cb;
 }
 /* If using an image */
 button img {
@@ -153,8 +154,10 @@ button img {
 }
 
 .card.active .fade-in:nth-child(1) { animation-delay: 0s; }
-.card.active .fade-in:nth-child(2) { animation-delay: 2s; }
-.card.active .fade-in:nth-child(3) { animation-delay: 3s; }
+.card.active .fade-in:nth-child(2) { animation-delay: .7s; }
+.card.active .fade-in:nth-child(3) { animation-delay: 1.4s; }
+.card.active .fade-in:nth-child(4) { animation-delay: 2.1s; }
+.card.active .fade-in:nth-child(5) { animation-delay: 2.8s; }
 
 @keyframes fadeInAnimation {
     from { opacity: 0; }
@@ -200,7 +203,7 @@ button img {
 .restart-icon {
     cursor: pointer;
     font-size: 24px; /* Adjust as needed */
-    color: red;
+    color: white;
 }
 .section-size {
     width: 70%; /* Adjust based on layout */
@@ -213,9 +216,178 @@ button img {
     padding: 20px;
     /* Other styling as needed */
 }
+.card-style h2 u a {
+    color: white;
+}
+.card-style h2 u a:hover{
+    cursor: pointer;
+    color: #ffc0cb;
+}
+.grid-container {
+    display: block;
+    width: 50%;
+}
+
+.grid-item {
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease-out;
+}
+.grid-item:nth-child(1) {
+    background: #5fa7c2;
+    color: white;
+    margin-right: 50px;
+}
+.grid-item:nth-child(2) {
+    background: #beb85d;
+    color: white;
+    margin-left: 50px;
+}
+.grid-item:nth-child(3) {
+    background: #D96A83;
+    color: white;
+    margin-right: 50px;
+}
+.grid-item:nth-child(4) {
+    background: #846C72;
+    color: white;
+    margin-left: 50px;
+}
+.grid-item:nth-child(5) {
+    background: #00445C;
+    color: white;
+    margin-right: 50px;
+}
+
+.grid-item:hover, .sources:hover {
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.37);
+}
+
+.grid-item h2 {
+    margin-top: 0;
+    color: white;
+}
+
+.grid-item p {
+    margin-bottom: 2px;
+}
+.sources {
+    display: block;
+    text-align: left;
+    width: 70%;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.3s ease-out;
+}
+.citation {
+    font-size: small;
+}
+#feminist-timeline.horizontal-tree-timeline {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 20px;
+    overflow-x: auto; /* For horizontal scrolling */
+}
+
+.horizontal-tree-timeline .timeline-main-line {
+    position: absolute;
+    height: 2px;
+    background-color: #007bff; /* Line color */
+    width: 100%;
+    z-index: 1;
+}
+
+.horizontal-tree-timeline .timeline-node {
+    position: relative;
+    width: 200px; /* Adjust as needed */
+    padding: 10px;
+    background-color: #ff8e8e;
+    color: #131313;
+    border-radius: 4px;
+    margin: 0 20px;
+    z-index: 2;
+}
+
+.horizontal-tree-timeline .timeline-node.above {
+    align-self: flex-start;
+}
+
+.horizontal-tree-timeline .timeline-node.below {
+    align-self: flex-end;
+}
+
+.horizontal-tree-timeline .timeline-node::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #007bff; /* Branch color */
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.horizontal-tree-timeline .timeline-node.above::before {
+    top: 100%;
+}
+
+.horizontal-tree-timeline .timeline-node.below::before {
+    top: -2px;
+}
+
+.horizontal-tree-timeline .node-content {
+    text-align: center;
+}
+
+/* Style for the headings and paragraphs */
+.horizontal-tree-timeline .timeline-node h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.horizontal-tree-timeline .timeline-node p {
+    font-size: 1em;
+}
+#inspiration-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    padding: 20px;
+}
+
+.video-block {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 15px;
+}
+
+.video-block iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9; /* Maintain a 16:9 aspect ratio */
+    border-radius: 5px;
+}
+
+.video-block h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+.video-block p {
+    font-size: 0.9em;
+    color: #666;
+}
+
 
 .footer {
-    position: fixed;
+    height: 5vh;
     background-color: #ffc0cb;
     color: white;
     text-align: center;

@@ -394,7 +394,7 @@ button img {
     bottom: 0;
     width: 100%;
 }
-@media (min-width:600px) {
+@media (max-width:1200px) {
     .grid-item {
         font-size: small;
         padding: 5px;
